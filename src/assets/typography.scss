@@ -1,0 +1,222 @@
+@import url('./fonts.scss');
+
+.inputStrong40{
+    font-size:$fontSize40;
+    font-weight: $strong;
+    line-height: 120%;
+}
+.displayStrong32{
+    font-size:$fontSize32;
+    font-weight: $strong;
+    line-height: 120%;
+}
+.displaySemi32{
+    font-size: $fontSize32;
+    font-weight: $semi;
+    line-height: 120%;
+}
+.displayStrong28{
+    font-size:$fontSize28;
+    font-weight: $strong;
+    line-height: 125%;
+}
+.displaySemi28{
+    font-size: $fontSize28;
+    font-weight: $semi;
+    line-height: 125%;
+}
+.displayStrong24{
+    font-size:$fontSize24;
+    font-weight: $strong;
+    line-height: 130%;
+}
+.displaySemi24{
+    font-size: $fontSize24;
+    font-weight: $semi;
+    line-height: 130%;
+}
+.headerStrong20{
+    font-size:$fontSize20;
+    font-weight: $strong;
+    line-height: 140%;
+}
+.headerSemi20{
+    font-size: $fontSize20;
+    font-weight: $semi;
+    line-height: 140%;
+}
+.headerStrong16{
+    font-size:$fontSize16;
+    font-weight: $strong;
+    line-height: 140%;
+}
+.headerSemi16{
+    font-size: $fontSize16;
+    font-weight: $semi;
+    line-height: 140%;
+}
+.headerStrong14{
+    font-size:$fontSize14;
+    font-weight: $strong;
+    line-height: 140%;
+}
+.headerSemi14{
+    font-size: $fontSize14;
+    font-weight: $semi;
+    line-height: 140%;
+}
+.subHeadStrong14{
+    font-size:$fontSize14;
+    font-weight: $strong;
+    line-height: 135%;
+}
+.subHeadStrong14{
+    font-size:$fontSize14;
+    font-weight: $semi;
+    line-height: 135%;
+}
+.subHeadStrong12{
+    font-size:$fontSize12;
+    font-weight: $strong;
+    line-height: 150%;
+}
+.subHeadSemi12{
+    font-size: $fontSize12;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.bodySemi16{
+    font-size: $fontSize16;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.bodyDefault16{
+    font-size: $fontSize16;
+    font-weight: $default;
+    line-height: 150%;
+}
+.bodySemi14{
+    font-size: $fontSize14;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.bodyDefault14{
+    font-size: $fontSize14;
+    font-weight: $default;
+    line-height: 150%;
+}
+.smallStrong12{
+    font-size:$fontSize12;
+    font-weight: $strong;
+    line-height: 165%;
+}
+.smallSemi12{
+    font-size: $fontSize12;
+    font-weight: $semi;
+    line-height: 165%;
+}
+.smallDefault12{
+    font-size: $fontSize12;
+    font-weight: $default;
+    line-height: 165%;
+}
+.xsDefault8{
+    font-size: $fontSize8;
+    font-weight: $default;
+    line-height: 120%;
+}
+.buttonSemi16{
+    font-size: $fontSize16;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.buttonSemi14{
+    font-size: $fontSize14;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.buttonSemi12{
+    font-size: $fontSize12;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.linkSemi16{
+    font-size: $fontSize16;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.linkSemi14{
+    font-size: $fontSize14;
+    font-weight: $semi;
+    line-height: 150%;
+}
+.inpDefault16{
+    font-size: $fontSize16;
+    font-weight: $default;
+    line-height: 100%;
+}
+.inpDefault14{
+    font-size: $fontSize14;
+    font-weight: $default;
+    line-height: 100%;
+}
+.autoStrong20{
+    font-size:$fontSize20;
+    font-weight: $strong;
+    line-height: auto;
+}
+.autoSemi20{
+    font-size: $fontSize20;
+    font-weight: $semi;
+    line-height: auto;
+}
+.autoDefault12 {
+    font-size: $fontSize12;
+    font-weight: $default;
+    line-height: auto; 
+}
+.autoStrong16{
+    font-size:$fontSize16;
+    font-weight: $strong;
+    line-height: auto;
+}
+.autoSemi16{
+    font-size: $fontSize16;
+    font-weight: $semi;
+    line-height: auto;
+}
+.autoDefault16 {
+    font-size: $fontSize16;
+    font-weight: $default;
+    line-height: auto; 
+}
+.autoStrong14{
+    font-size:$fontSize14;
+    font-weight: $strong;
+    line-height: auto;
+}
+.autoSemi14{
+    font-size: $fontSize14;
+    font-weight: $semi;
+    line-height: auto; 
+}
+.autoDefault14 {
+    font-size: $fontSize14;
+    font-weight: $default;
+    line-height: auto; 
+}
+.autoStrong12{
+    font-size:$fontSize12;
+    font-weight: $strong;
+    line-height: auto;
+}
+.autoDefault12{
+    font-size: $fontSize12;
+    font-weight: $default;
+    line-height: auto; 
+}
+.autoSemi12{
+    font-size: $fontSize12;
+    font-weight: $semi;
+    line-height: auto; 
+}
