@@ -1,0 +1,26 @@
+:root {
+  --sideMargin: 0px;
+  --middleMargin: 0px;
+}
+
+//mobile - iphone 13 mini
+@media (min-width: 343px) and (max-width: 375px) {
+:root {
+  --sideMargin: 16px;
+  --middleMargin: 0px;
+}
+}
+//tablet - ipad pro 11 inch
+@media (min-width: 720px) and (max-width: 768px) {
+    :root {
+    --sideMargin: 48px;
+    --middleMargin: 0px;
+    }
+}
+//desktop - macbook air 13 inch
+@media (min-width: 1240px) and (max-width: 1440px) {
+    :root {
+    --sideMargin: 200px;
+    --middleMargin: 16px;
+    }
+}
