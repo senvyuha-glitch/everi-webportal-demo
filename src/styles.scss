@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'assets/variables' as *;
+@use 'assets/fonts.scss' as *;
+@import './assets/typography.scss';
+@import './assets/elevation.scss';
+@import './assets/media.scss';
+@import './assets/screenbackground.scss';
+
+
+.headerDiv{
+    min-height: $height152;
+    background-color: $seaBlue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.contentDiv{
+    margin-top: $height152;
+    margin-bottom: $height200;
+    background-color: $fogWhite;
+}
+.footerDiv{
+    min-height: $height200;
+    background-color: $seaBlue;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
