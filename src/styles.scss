@@ -8,7 +8,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 @use 'assets/variables' as *;
-@use 'assets/fonts.scss' as *;
+@use 'assets/fonts' as *;
 @import './assets/typography.scss';
 @import './assets/elevation.scss';
 @import './assets/media.scss';
@@ -23,6 +23,25 @@ html {
     typography: Roboto,
     density: 0,
   ));
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: $space0;
+    padding: $space0;
+    border: $radius0;
+    outline: $radius0;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+
+.headerDiv{
+    min-height: $height152;
+    background-color: $seaBlue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 body {
@@ -52,11 +71,7 @@ body {
 //     width: 100%;
 //     z-index: 1;
 // }
-.contentDiv{
-    margin-top: $height152;
-    margin-bottom: $height200;
-    background-color: $fogWhite;
-}
+
 .footerDiv{
     min-height: $height200;
     background-color: $seaBlue;
@@ -64,5 +79,3 @@ body {
     width: 100%;
     z-index: 1;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
