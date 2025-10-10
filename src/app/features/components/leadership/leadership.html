@@ -1,0 +1,13 @@
+  <div class="leaderships_div">
+    <div class="leaderships_title">Leadership Team</div>
+    <div class="leaderships_title_line_div"><div class="leaderships_title_line"></div></div>
+    <div class="leaderships_card_div">
+        <ng-container *ngFor="let leader of leaderships">
+            <app-card>
+                <img class="prod_card_img" [src]="leader.image" width="238" height="251" alt="Product Image">
+                <p class="prod_card_title">{{ leader.title }}</p>
+                <p class="prod_card_info">{{ leader.content }}</p>
+            </app-card>
+        </ng-container>
+        </div>
+    </div>
