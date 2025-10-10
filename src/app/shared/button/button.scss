@@ -1,0 +1,30 @@
+@use './../../../assets/variables' as *;
+@use './../../../assets/fonts' as *;
+
+@mixin button-base {
+    cursor: pointer;
+    background: $fruityOrange;
+    color: $white;
+    border: none;
+    padding: $space12 $space24;
+    font-size: $fontSize14;
+    font-weight: $default;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+.primaryBtn{
+  @include button-base;
+    &:hover{
+        background: $seaBlue;
+    }
+}
+.secondaryBtn{ 
+  @include button-base;
+   &:hover{
+        background: $white;
+        color: $inkGray;
+    }
+}
