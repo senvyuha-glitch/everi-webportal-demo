@@ -1,7 +1,7 @@
 @use './../../../../assets/variables' as *;
 @use './../../../../assets/fonts' as *;
-@import url('./../../../../assets/typography.scss');
-@import url('./../../../../assets/elevation.scss');
+@use './../../../../assets/typography.scss' as *;
+@use './../../../../assets/elevation.scss' as *;
 
 .prod_card_img{
     max-width: 100%;
@@ -20,6 +20,11 @@
     margin-top: $height240;
     margin-bottom: $height200;
     background-color: $fogWhite;
+}
+.carousel_div{
+    margin-bottom: $space48;
+    width: $fullWidth;
+    display: flex;
 }
 .prod_card_div{
     display: flex;

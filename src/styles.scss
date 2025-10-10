@@ -9,10 +9,10 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'assets/variables' as *;
 @use 'assets/fonts' as *;
-@import './assets/typography.scss';
-@import './assets/elevation.scss';
-@import './assets/media.scss';
-@import './assets/screenbackground.scss';
+@use './assets/typography.scss' as *;
+@use './assets/elevation.scss' as *;
+@use './assets/media.scss' as *;
+@use './assets/screenbackground.scss' as *;
 
 html {
   @include mat.theme((

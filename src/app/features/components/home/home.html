@@ -1,4 +1,10 @@
+
+
+
 <div class="contentDiv">
+    <div class="carousel_div">
+        <app-carousel [images]="bannerArr"></app-carousel>
+    </div>
     <div class="prod_card_div">
     <ng-container *ngFor="let card of cardsArr">
         <app-card>

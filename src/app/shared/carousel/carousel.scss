@@ -1,0 +1,42 @@
+@use './../../../assets/variables' as *;
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  .carousel-image {
+        img {
+            width: $fullWidth;
+            height: 100%;
+            display: block;
+            padding: $space8;
+            border-radius: $radius20;
+        }
+    }
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(128, 128, 128, 0.4); // transparent gray
+  color: $fogWhite;
+  border: none;
+  width: $width40;
+  height: $height40;
+  border-radius: 50%; // makes it round
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav:hover {
+  background-color: rgba(128, 128, 128, 0.6); // slightly darker on hover
+}
+
+.prev { left: $space12; }
+.next { right: $space12; }
