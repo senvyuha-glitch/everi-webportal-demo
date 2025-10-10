@@ -1,0 +1,69 @@
+@use './../../../assets/variables' as *;
+@use './../../../assets/fonts' as *;
+@use './../../../assets/typography.scss' as *;
+
+.article{
+    display: flex;
+    padding-top: $space64;
+    padding-bottom: $space64;
+}
+.reverse-posn{
+    flex-direction: row-reverse;    
+}
+@mixin article-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 50%;
+    padding-left: $space16;
+    padding-right: $space16;
+}
+.article-left{
+    @include article-side;
+}
+.article-right{
+      @include article-side;
+      padding: $height60 $height80 $height80;
+}
+.article-title{
+    font-size: $fontSize32;
+    font-weight: $strong;
+    margin-bottom: $space24;
+}
+.article-sub-title{
+    font-size: $fontSize24;
+    font-weight: $strong;
+    margin-bottom: $space12;
+    line-height: $height32;
+}
+.article-content{
+    font-size: $fontSize16;
+    font-weight: $default;
+    line-height: $height32;
+    margin-bottom: $height40;
+}
+.article-splitter{
+    width:$width104;
+    height: $height4;
+    background: $white;
+    margin-bottom: $space12;
+}
+.article-bg-light-blue{
+    background: $skyBlue;
+    color:$white;
+}
+.article-bg-dark-blue{
+    background: $seaBlue;
+    color:$white;
+}
+.article-bg-white{
+    background: $white;
+    color: $shuttleGray;
+    .article-title{
+        color: $inkGray;
+    }
+    .article-sub-title{
+        color: $midnightGray;
+    }
+}

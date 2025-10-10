@@ -1,6 +1,7 @@
 @use './../../../assets/variables' as *;
 
 .card{
+    cursor: pointer;
     width: $width240;
     padding-left: $space16;
     padding-right: $space16;
