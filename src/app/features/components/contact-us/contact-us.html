@@ -1,0 +1,100 @@
+<div class="contactus_div">
+  <div class="contactus_title">Contact Us</div>
+  <div class="contactus_title_line_div"><div class="contactus_title_line"></div></div>
+  <div class="contactus_card_div">
+    <p class="contactus_card_info">
+      Have questions or need assistance? We're here to help! Reach out to our team for support,
+      inquiries, or feedback. Your satisfaction is our priority.
+    </p>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <app-dynamic-input
+          label="First Name"
+          type="text"
+          placeholder="First Name"
+          [formControl]="firstNameControl"
+        ></app-dynamic-input>
+        <app-dynamic-input
+          label="Last Name"
+          type="text"
+          placeholder="Last Name"
+          [formControl]="lastNameControl"
+        ></app-dynamic-input>
+      </div>
+      <div class="form-input">
+        <app-dynamic-input
+          label="Email"
+          type="email"
+          placeholder="Email"
+          [formControl]="emailControl"
+        ></app-dynamic-input>
+      </div>
+      <div class="form-input">
+        <app-dynamic-input
+          label="Phone"
+          type="text"
+          placeholder="Phone"
+          [formControl]="phoneControl"
+        ></app-dynamic-input>
+      </div>
+      <div class="form-input">
+        <app-dynamic-input
+          label="Company"
+          type="text"
+          placeholder="Company"
+          [formControl]="companyControl"
+        ></app-dynamic-input>
+      </div>
+      <div class="form-input">
+        <app-dynamic-input
+          label="Title"
+          type="text"
+          placeholder="Title"
+          [formControl]="titleControl"
+        ></app-dynamic-input>
+      </div>
+      <div class="form-input">
+        <app-dynamic-input
+          type="radio"
+          label="Department of Contact"
+          [options]="[
+            { label: 'Support', value: 'Support' },
+            { label: 'Sales – Fintech or Games', value: 'Sales – Fintech or Games' },
+            {
+              label: 'Sales – BeOn Venue/Sports/Hospitality',
+              value: 'Sales – BeOn Venue/Sports/Hospitality',
+            },
+            { label: 'Casino Patron Support', value: 'Casino Patron Support' },
+            { label: 'Game Parts', value: 'Game Parts' },
+            { label: 'FinTech Parts', value: 'FinTech Parts' },
+            { label: 'General Inquiries', value: 'General Inquiries' },
+            { label: 'Customer Complaint', value: 'Customer Complaint' },
+          ]"
+          [formControl]="departmentControl"
+        >
+        </app-dynamic-input>
+      </div>
+      <div class="form-message">
+        <app-dynamic-input
+          label="Message"
+          type="textarea"
+          placeholder="Message"
+          [formControl]="messageControl"
+        ></app-dynamic-input>
+      </div>
+      <div class="checkbox-wrapper">
+        <label>
+            <input type="checkbox" [formControl]="humanControl" />
+            I confirm, I am not a robot 🤖
+        </label>
+        @if (form.get('isHuman')?.invalid && form.get('isHuman')?.touched) {
+            <div class="error-message">You must confirm you're human.</div>
+        }
+        <!-- <div class="error" *ngIf="form.get('isHuman')?.invalid && form.get('isHuman')?.touched">
+            You must confirm you're human.
+        </div> -->
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</div>

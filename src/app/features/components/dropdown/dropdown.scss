@@ -1,0 +1,25 @@
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  z-index: 1000;
+
+  li {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+
+    a {
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}

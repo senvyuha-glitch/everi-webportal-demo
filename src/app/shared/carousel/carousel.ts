@@ -1,14 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, signal, Signal, ɵunwrapWritableSignal, WritableSignal } from '@angular/core';
+import {
+  Component,
+  Input,
+  signal,
+  Signal,
+  ɵunwrapWritableSignal,
+  WritableSignal,
+} from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './carousel.html',
-  styleUrl: './carousel.scss'
+  styleUrl: './carousel.scss',
 })
-
 export class Carousel {
   @Input() images: { image: string; alt: string; space?: string; radius?: number }[] = [];
   currentIndex = 0;

@@ -1,4 +1,3 @@
-
 // Include theming for Angular Material with `mat.theme()`.
 // This Sass mixin will define CSS variables that are used for styling Angular Material
 // components according to the Material 3 design spec.
@@ -15,33 +14,99 @@
 @use './assets/screenbackground.scss' as *;
 
 html {
-  @include mat.theme((
-    color: (
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    typography: Roboto,
-    density: 0,
-  ));
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
 }
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-    margin: $space0;
-    padding: $space0;
-    border: $radius0;
-    outline: $radius0;
-    vertical-align: baseline;
-    background: transparent;
-    box-sizing: border-box;
-    font-family: $fontFamily;
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: $space0;
+  padding: $space0;
+  border: $radius0;
+  outline: $radius0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  font-family: $fontFamily;
 }
 
-.headerDiv{
-    min-height: $height152;
-    background-color: $seaBlue;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+.headerDiv {
+  min-height: $height152;
+  background-color: $seaBlue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 body {
@@ -61,8 +126,6 @@ body {
   margin: 0;
 }
 
-
-
 // .headerDiv{
 //     min-height: $height80;
 //     background-color: $seaBlue;
@@ -72,10 +135,10 @@ body {
 //     z-index: 1;
 // }
 
-.footerDiv{
-    min-height: $height200;
-    background-color: $seaBlue;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
+.footerDiv {
+  min-height: $height200;
+  background-color: $seaBlue;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
 }

@@ -1,63 +1,61 @@
 @use './../../../../assets/variables' as *;
 
-
 .headerDiv {
-    position: fixed;
-    top: 0;
-    width: $fullWidth;
-    z-index: 1;
-    background-color: $seaBlue;
+  position: fixed;
+  top: 0;
+  width: $fullWidth;
+  z-index: 1;
+  background-color: $seaBlue;
+  display: flex;
+  flex-direction: column;
+
+  .nav-banner-container {
+    min-height: $height128;
+    top: 10px;
+    margin-bottom: 8px;
+    color: white;
     display: flex;
-    flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
 
-    .nav-banner-container {
-        min-height: $height128;
-        top: 10px;
-        margin-bottom: 8px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .nav-banner-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: $height128;
+      color: white;
 
-        .nav-banner-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: $height128;
-            color: white;
+      .banner-text {
+        font-style: normal;
+        text-align: center;
 
-            .banner-text {
-                font-style: normal;
-                text-align: center;
-
-                h3 {
-                    margin: 0;
-                    font-size: 22px;
-                    font-family: "Verlag A", "Verlag B", sans-serif;
-                    font-weight: 400 !important;
-                    transition: font-size 0.3s ease;
-                }
-            }
-
-            .banner-image {
-                margin-top: 20px;
-                img {
-                    width: 95px;
-                    height: 35px;
-                    transition: width 0.3s ease, height 0.3s ease;
-                    border-radius: 8px;
-                    object-fit: cover;
-                }
-            }
-            
+        h3 {
+          margin: 0;
+          font-size: 22px;
+          font-family: 'Verlag A', 'Verlag B', sans-serif;
+          font-weight: 400 !important;
+          transition: font-size 0.3s ease;
         }
+      }
+
+      .banner-image {
+        margin-top: 20px;
+        img {
+          width: 95px;
+          height: 35px;
+          transition:
+            width 0.3s ease,
+            height 0.3s ease;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
     }
+  }
 }
 
-
-.prod-card__img{
-    max-width: 100%;
-    margin-bottom:$space28;
+.prod-card__img {
+  max-width: 100%;
+  margin-bottom: $space28;
 }

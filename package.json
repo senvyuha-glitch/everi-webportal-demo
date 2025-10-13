@@ -7,6 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "format": "prettier --write .",
+    "prerender": "ng run everi:prerender",
     "serve:ssr:everi": "node dist/everi/server/server.mjs"
   },
   "prettier": {
@@ -34,6 +36,7 @@
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.3",
     "express": "^5.1.0",
+    "prettier": "^3.6.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

@@ -5,14 +5,12 @@ import { Menu } from '../../../features/components/menu/menu';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatSlideToggleModule,Menu],
+  imports: [MatSlideToggleModule, Menu],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrl: './header.scss',
 })
 export class Header {
+  constructor() {}
 
-  constructor() { }
-  
-  toggleSidenav() {
-  }
+  toggleSidenav() {}
 }

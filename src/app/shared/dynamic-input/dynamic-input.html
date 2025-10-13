@@ -1,0 +1,57 @@
+<div class="input-wrapper">
+  @if (label) {
+    <label>{{ label }}</label>
+  }
+
+  @switch (type) {
+    @case ('textarea') {
+      <textarea
+        [value]="value"
+        [placeholder]="placeholder"
+        [disabled]="disabled"
+        (input)="handleChange($event)"
+        rows="4"
+        [formControl]="formControl"
+      ></textarea>
+    }
+    @case ('select') {
+      <select
+        [value]="value"
+        [disabled]="disabled"
+        (change)="handleChange($event)"
+        [formControl]="formControl"
+      >
+        @for (opt of options ?? []; track opt.value) {
+          <option [value]="opt.value">{{ opt.label }}</option>
+        }
+      </select>
+    }
+    @case ('radio') {
+      <div class="radio-group">
+        @for (opt of options ?? []; track opt.value) {
+          <label>
+            <input
+              type="radio"
+              [value]="opt.value"
+              [checked]="value === opt.value"
+              [disabled]="disabled"
+              (change)="handleChange($event)"
+              [formControl]="formControl"
+            />
+            {{ opt.label }}
+          </label>
+        }
+      </div>
+    }
+    @default {
+      <input
+        [type]="type"
+        [value]="value"
+        [placeholder]="placeholder"
+        [disabled]="disabled"
+        (input)="handleChange($event)"
+        [formControl]="formControl"
+      />
+    }
+  }
+</div>

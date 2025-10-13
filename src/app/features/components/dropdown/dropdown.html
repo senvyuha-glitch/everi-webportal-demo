@@ -1,0 +1,7 @@
+<ul class="dropdown-menu">
+  @for (item of items; track item.label) {
+    <li>
+      <a [routerLink]="item.route">{{ item.label }}</a>
+    </li>
+  }
+</ul>

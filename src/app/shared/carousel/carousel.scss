@@ -7,14 +7,14 @@
   overflow: hidden;
 
   .carousel-image {
-        img {
-            width: $fullWidth;
-            height: 100%;
-            display: block;
-            padding: $space8;
-            border-radius: $radius20;
-        }
+    img {
+      // width: $fullWidth;
+      // height: 100%;
+      display: block;
+      padding: $space8;
+      border-radius: $radius20;
     }
+  }
 }
 
 .nav {
@@ -38,5 +38,9 @@
   background-color: rgba(128, 128, 128, 0.6); // slightly darker on hover
 }
 
-.prev { left: $space12; }
-.next { right: $space12; }
+.prev {
+  left: $space12;
+}
+.next {
+  right: $space12;
+}

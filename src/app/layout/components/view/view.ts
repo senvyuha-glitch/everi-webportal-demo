@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-view',
   imports: [],
   templateUrl: './view.html',
-  styleUrl: './view.scss'
+  styleUrl: './view.scss',
 })
-export class View {
-
-}
+export class View {}

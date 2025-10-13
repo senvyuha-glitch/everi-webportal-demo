@@ -1,36 +1,43 @@
 @use './../../../../assets/variables' as *;
 
 .nav-links-container {
-        background: midnightblue;
-        .navbar {
-            width: $fullWidth;
-            display: flex;
-            align-items: center;
-            
-            .everi-logo-container {
-                // display: flex;
-                // align-items: center;
-                padding-left: 20px;
-                width: $pwidth20;
+  background: midnightblue;
+  .navbar {
+    width: $fullWidth;
+    display: flex;
+    align-items: center;
 
-            }
-            .menu-container {
-                width: $pwidth80;
-
-                ul {
-                    display: flex;
-                    justify-content: space-around;
-                    list-style-type: none;
-                }
-            }
-        }
-        a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            &.active-link {
-                text-decoration: underline;
-            }
-        }
+    .everi-logo-container {
+      // display: flex;
+      // align-items: center;
+      padding-left: 20px;
+      width: $pwidth20;
     }
+    .menu-container {
+      width: $pwidth80;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+      }
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    &.active-link {
+    //   text-decoration: underline;
+      background-color: lightgray;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+  }
+}
+
+.dropdown-wrapper {
+  position: relative;
+}

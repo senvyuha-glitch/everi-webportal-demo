@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { View } from './view';
+import { DynamicInput } from './dynamic-input';
 
-describe('View', () => {
-  let component: View;
-  let fixture: ComponentFixture<View>;
+describe('DynamicInput', () => {
+  let component: DynamicInput;
+  let fixture: ComponentFixture<DynamicInput>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [View],
+      imports: [DynamicInput],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(View);
+    fixture = TestBed.createComponent(DynamicInput);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
