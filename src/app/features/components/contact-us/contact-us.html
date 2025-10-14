@@ -94,9 +94,6 @@
         @if (form.get('isHuman')?.invalid && form.get('isHuman')?.touched) {
           <div class="error-message">You must confirm you're human.</div>
         }
-        <!-- <div class="error" *ngIf="form.get('isHuman')?.invalid && form.get('isHuman')?.touched">
-            You must confirm you're human.
-        </div> -->
       </div>
       <button type="submit" class="submit-button">Submit</button>
     </form>

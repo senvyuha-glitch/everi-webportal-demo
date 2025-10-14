@@ -10,7 +10,7 @@
 }
 
 //mobile - iphone 13 mini
-@media (min-width: 343px) and (max-width: 400px) {
+@media (min-width: 343px) and (max-width: 800px) {
 :root {
   --sideMargin: 16px;
   --middleMargin: 0px;
@@ -80,6 +80,35 @@
         display: block;
         font-size: $fontSize32;
         margin: $space0 $space12 $space12 $space12;
+      }
+
+      .contactus_div {
+        position: relative;
+        .contactus_card_div {
+           
+          form {
+
+            .form-group {
+              flex-direction: column;
+              align-items: flex-start;
+              margin-bottom: $space16;
+              width: 100%;
+
+              app-dynamic-input {
+                // flex: unset;
+                width: 100%;
+              }
+              label {
+                margin-bottom: $space8;
+              }
+
+            }
+
+            .form-input {
+              width: 100%;
+            }
+          }
+        }
       }
     }
 }

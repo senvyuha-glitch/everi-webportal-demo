@@ -15,7 +15,7 @@
   select {
     padding: $space8;
     font-size: $fontSize16;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     border-radius: $radius4;
     margin-bottom: $space8;
 
@@ -36,7 +36,7 @@
   }
 
   .error-message {
-    color: red;
+    // color: red;
     font-size: $fontSize12;
     margin-top: -$space4;
     margin-bottom: $space8;
