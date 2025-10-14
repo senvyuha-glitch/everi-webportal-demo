@@ -39,15 +39,15 @@
     margin-bottom: $space16;
     color: var(--text-color);
         mat-slide-toggle {
-            font-weight: 500;
+            font-weight: $default;
             color: var(--text-color);
             cursor: pointer;
         }
     }
 
   .contactus_title {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: $fontSize36;
+    font-weight: $semi;
     margin-bottom: $space8;
     text-align: center;
   }
@@ -66,7 +66,6 @@
   }
 
   .contactus_card_div {
-    // background-color: #fff;
     color: var(--text-color);
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -77,16 +76,15 @@
 
     form {
       .form-group {
-        width: 100%;
+        width: $fullWidth;
         // padding: 0.5rem;
         // margin-bottom: 1rem;
         // border: 1px solid #ccc;
-        // border-radius: 4px;
-        font-size: 1rem;
+        border-radius: $radius4;
+        font-size: $fontSize16;
         display: flex;
-        gap: 1rem;
-        border-radius: var(--input-radius);
-        transition: border-radius 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        gap: $space16;
+
         app-dynamic-input {
           flex: 1;
         }
@@ -94,9 +92,8 @@
       .form-input {
         width: 49%;
         // padding: 0.5rem;
-        font-size: 1rem;
+        font-size: $fontSize16;
         gap: $space16;
-        // border: 1px solid #ccc;
         border-radius: var(--input-radius);
 
         &:focus {
@@ -119,8 +116,8 @@
       .submit-button {
         width: 10%;
         padding: $space12;
-        font-size: 1rem;
-        font-weight: 500;
+        font-size: $fontSize16;
+        font-weight: $default;
         background-color: #0078d4;
         color: #fff;
         border: none;
@@ -138,34 +135,34 @@
         }
       }
       button {
-        margin-top: 1rem;
+        margin-top: $space16;
         background-color: #0078d4;
       }
     }
     .contactus_card_info {
-      font-size: 1rem;
+      font-size: $fontSize16;
       margin-bottom: $space24;
       line-height: 1.6;
     }
   }
 }
 .checkbox-wrapper {
-  margin-top: 1rem;
+  margin-top: $space16;
   label {
     display: flex;
     align-items: center;
     gap: $space8;
-    font-weight: 500;
+    font-weight: $default;
   }
 
   .error {
     color: red;
-    font-size: 0.875rem;
+    font-size: $fontSize12;
     margin-top: $space4;
   }
 }
 .error-message {
   color: red;
-  font-size: 0.875rem;
+  font-size: $fontSize12;
   margin-top: $space4;
 }
