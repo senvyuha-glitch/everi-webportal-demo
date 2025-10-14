@@ -1,24 +1,23 @@
 @use './../../../assets/variables' as *;
 @use './../../../assets/fonts' as *;
 
-
 .input-wrapper {
   display: flex;
   flex-direction: column;
   //   margin-bottom: 1rem;
 
   label {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    margin-bottom: $space8;
+    font-weight: $semi;
   }
 
   input,
   select {
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: $space8;
+    font-size: $fontSize16;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
+    border-radius: $radius4;
+    margin-bottom: $space8;
 
     &:focus {
       outline: none;
@@ -31,8 +30,15 @@
     flex-direction: column;
 
     label {
-      margin-bottom: 0.25rem;
+      margin-bottom: $space4;
       font-weight: normal;
     }
+  }
+
+  .error-message {
+    color: red;
+    font-size: $fontSize12;
+    margin-top: -$space4;
+    margin-bottom: $space8;
   }
 }

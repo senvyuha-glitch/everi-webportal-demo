@@ -7,7 +7,26 @@
     display: flex;
     align-items: center;
 
-   
+    // .everi-logo-container {
+    //   padding-left: $space20;
+    //   width: $pwidth20;
+
+    //   button {
+    //     width: $pwidth20;
+    //     height: $height40;
+    //     padding-left: $space20;
+    //     border: none;
+    //     cursor: pointer;
+    //     background: transparent;
+
+    //     a {
+    //       svg {
+    //         width: 200px;
+    //         // object-fit: cover;
+    //       }
+    //     }
+    //   }
+    // }
     .menu-container {
       // width: $pwidth80;
 
@@ -17,6 +36,12 @@
       //   list-style-type: none;
       // }
     }
+    // &:hover {
+    //   background-color: #ff671d;
+    //   color: white;
+    //   padding: 5px 10px;
+    //   border-radius: 5px;
+    // }
   }
   // a {
   //   color: white;

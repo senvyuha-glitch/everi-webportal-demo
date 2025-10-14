@@ -11,8 +11,23 @@
 @use './assets/typography.scss' as *;
 @use './assets/elevation.scss' as *;
 @use './assets/media.scss' as *;
+@use './assets/theme.scss' as *;
 @use './assets/screenbackground.scss' as *;
 @import url('./assets/_media.scss');
+
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --input-radius: 4px;
+  --border-radius: 4px;
+}
+
+.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --input-radius: 12px;
+  --border-radius: 0px;
+}
 
 html {
   @include mat.theme(

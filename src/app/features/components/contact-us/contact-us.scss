@@ -1,53 +1,89 @@
 @use './../../../../assets/variables' as *;
 @use './../../../../assets/fonts' as *;
+@use './../../../../assets/theme' as *;
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --input-radius: $radius4;
+  --border-radius: $radius4;
+}
+
+.dark-theme {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --input-radius: $radius12;
+  --border-radius: $radius0;
+}
+
 
 .contactus_div {
   margin-top: $height200;
-  background-color: $seaBlue;
+//   background-color: $seaBlue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: $space32 $space16;
   background-color: #f9f9f9;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
+  
+
+  input,
+  select,
+  textarea {
+    border-radius: var(--border-radius);
+    transition: border-radius 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .theme-toggle {
+    margin-bottom: $space16;
+    color: var(--text-color);
+        mat-slide-toggle {
+            font-weight: $default;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+    }
 
   .contactus_title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: $fontSize36;
+    font-weight: $semi;
+    margin-bottom: $space8;
     text-align: center;
   }
 
   .contactus_title_line_div {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: $space24;
 
     .contactus_title_line {
-      width: 60px;
-      height: 4px;
+      width: $width60;
+      height: $height4;
       background-color: #0078d4;
-      border-radius: 2px;
+      border-radius: $radius4;
     }
   }
 
   .contactus_card_div {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: $space32;
+    border-radius: $radius8;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     form {
       .form-group {
-        width: 100%;
+        width: $fullWidth;
         // padding: 0.5rem;
         // margin-bottom: 1rem;
         // border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 1rem;
+        border-radius: $radius4;
+        font-size: $fontSize16;
         display: flex;
-        gap: 1rem;
+        gap: $space16;
 
         app-dynamic-input {
           flex: 1;
@@ -56,10 +92,9 @@
       .form-input {
         width: 49%;
         // padding: 0.5rem;
-        font-size: 1rem;
-        gap: 1rem;
-        // border: 1px solid #ccc;
-        border-radius: 4px;
+        font-size: $fontSize16;
+        gap: $space16;
+        border-radius: var(--input-radius);
 
         &:focus {
           outline: none;
@@ -72,7 +107,7 @@
         // padding: 0.5rem;
         font-size: 1rem;
         // border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: var(--input-radius);
         &:focus {
           outline: none;
           border-color: #007bff;
@@ -80,49 +115,54 @@
       }
       .submit-button {
         width: 10%;
-        padding: 0.75rem;
-        font-size: 1rem;
-        font-weight: 500;
+        padding: $space12;
+        font-size: $fontSize16;
+        font-weight: $default;
         background-color: #0078d4;
         color: #fff;
         border: none;
-        border-radius: 4px;
+        border-radius: $radius4;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: #005fa3;
+          background-color: #005fa3;
         }
 
         &:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
+          background-color: #ccc;
+          cursor: not-allowed;
         }
       }
       button {
-        margin-top: 1rem;
+        margin-top: $space16;
         background-color: #0078d4;
       }
     }
     .contactus_card_info {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
+      font-size: $fontSize16;
+      margin-bottom: $space24;
       line-height: 1.6;
     }
   }
 }
 .checkbox-wrapper {
-  margin-top: 1rem;
+  margin-top: $space16;
   label {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
+    gap: $space8;
+    font-weight: $default;
   }
 
   .error {
     color: red;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
+    font-size: $fontSize12;
+    margin-top: $space4;
   }
+}
+.error-message {
+  color: red;
+  font-size: $fontSize12;
+  margin-top: $space4;
 }

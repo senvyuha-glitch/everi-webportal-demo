@@ -1,75 +1,57 @@
-import { Component } from '@angular/core';
-import { DynamicInput } from '../../../shared/dynamic-input/dynamic-input';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { DynamicInput } from '../../../shared/dynamic-input/dynamic-input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [DynamicInput, CommonModule,ReactiveFormsModule],
+  standalone: true,
+  imports: [CommonModule,FormsModule, ReactiveFormsModule, DynamicInput, MatSlideToggleModule],
   templateUrl: './contact-us.html',
   styleUrl: './contact-us.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class ContactUs {
-
   form = new FormGroup({
-    firstname: new FormControl(''),
-    lastname: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    company: new FormControl(''),
-    title: new FormControl(''),
-    department: new FormControl(''),
-    message: new FormControl(''),
-    isHuman: new FormControl(false, { nonNullable: true, validators: Validators.requiredTrue })
+    firstname: new FormControl('', Validators.required),
+    lastname: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    phone: new FormControl('', Validators.required),
+    company: new FormControl('', Validators.required),
+    title: new FormControl('', Validators.required),
+    department: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required),
+    isHuman: new FormControl(false, { nonNullable: true, validators: Validators.requiredTrue }),
   });
 
   submittedData: any = null;
+  theme: 'light' | 'dark' = 'light';
+  isDarkMode: boolean = false;
+  get firstNameControl() { return this.form.get('firstname') as FormControl; }
+  get lastNameControl() { return this.form.get('lastname') as FormControl; }
+  get emailControl() { return this.form.get('email') as FormControl; }
+  get phoneControl() { return this.form.get('phone') as FormControl; }
+  get companyControl() { return this.form.get('company') as FormControl; }
+  get titleControl() { return this.form.get('title') as FormControl; }
+  get departmentControl() { return this.form.get('department') as FormControl; }
+  get messageControl() { return this.form.get('message') as FormControl; }
+  get humanControl() { return this.form.get('isHuman') as FormControl; }
 
-  get firstNameControl(): FormControl {
-    return this.form.get('firstname') as FormControl;
-  }
-
-  get lastNameControl(): FormControl {
-    return this.form.get('lastname') as FormControl;
-  }
-
-  get emailControl(): FormControl {
-    return this.form.get('email') as FormControl;
-  }
-
-  get phoneControl(): FormControl {
-    return this.form.get('phone') as FormControl;
-  }
-
-  get companyControl(): FormControl {
-    return this.form.get('company') as FormControl;
+  toggleTheme() {
+    console.log('Toggling theme from', this.theme);
+    this.theme = this.isDarkMode ? 'dark' : 'light';
+    document.body.classList.toggle('dark-theme', this.theme === 'dark');
   }
 
-  get titleControl(): FormControl {
-    return this.form.get('title') as FormControl;
-  }
-  
-  get departmentControl(): FormControl {
-    return this.form.get('department') as FormControl;
-  }
-  get messageControl(): FormControl {
-    return this.form.get('message') as FormControl;
-  }
-  get humanControl(): FormControl {
-    return this.form.get('isHuman') as FormControl;
-  }
   onSubmit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
     this.submittedData = this.form.value;
     console.log('Form submitted:', this.submittedData);
+    this.form.reset();
   }
-
-  // onContactClick() {
-  //   const email = this.emailControl.value;
-  //   if (email) {
-  //     alert(`Thank you for reaching out! We will contact you at ${email}.`);
-  //     this.emailControl.reset();
-  //   } else {
-  //     alert('Please enter a valid email address.');
-  //   }
-  // }
+  
 }
