@@ -42,6 +42,21 @@
     .everi-logo-container{
       padding-left: $space20;
       width: $pwidth80;
+            button {
+        width: $pwidth20;
+        height: $height40;
+        padding-left: $space20;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+
+        a {
+          svg {
+            width: 200px;
+            // object-fit: cover;
+          }
+        }
+      }
     }
     .menu li a {
       color: white;
@@ -93,6 +108,21 @@
       .everi-logo-container{
         padding-left: $space20;
         width: $pwidth20;
+              button {
+        width: $pwidth20;
+        height: $height40;
+        padding-left: $space20;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+
+        a {
+          svg {
+            width: 200px;
+            // object-fit: cover;
+          }
+        }
+      }
       }
       .menu {
         display: flex;
