@@ -1,0 +1,155 @@
+@use './../../../../assets/variables' as *;
+@use './../../../../assets/fonts' as *;
+@use './../../../../assets/theme' as *;
+@use './../../../../assets/media' as *;
+.footerDiv {
+  // background-color: #0C51A1 !important;
+  color: #fff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .column1 {
+        width: 245px;
+        margin: 12px;
+
+        .footer-everi-address {
+          margin-top: 12px;
+          font-size: 16px;
+          line-height: 1.5;
+          p {
+            margin: 4px 0;
+          }
+        }
+      }
+      .column2 {
+        width: 750px;
+        margin: 12px;
+
+        .menu-footer {
+          display: flex;
+          margin-bottom: 0;
+          margin-left: -16px;
+          margin-right: -16px;
+          list-style: none;
+          .nav-menu1 {
+            margin-bottom: 28px;
+            padding: 0 16px;
+            width: 165px;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            .nav-menu1-column1-container {
+              padding-top: 24px;
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                  line-height: 28px;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+          }
+          .nav-menu2 {
+            margin-bottom: 28px;
+            padding: 0 16px;
+            width: 165px;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            h2 {
+              font-family: 'Verlag A', 'Verlag B', sans-serif;
+              font-size: 20px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: #fff;
+            }
+            .nav-menu2-column2-container {
+              padding-top: 24px;
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                  line-height: 28px;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+          }
+
+          .nav-menu3 {
+            margin-bottom: 28px;
+            padding: 0 16px;
+            width: 165px;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            h2 {
+              font-family: 'Verlag A', 'Verlag B', sans-serif;
+              font-size: 20px;
+              font-weight: 700;
+              margin-bottom: 8px;
+              color: #fff;
+            }
+            .nav-menu3-column3-container {
+              padding-top: 24px;
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                  line-height: 28px;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .column3 {
+        width: 235px;
+        margin: 10px;
+
+        a {
+          display: inline-block;
+          width: 22px;
+          margin: 0 10px;
+
+          svg {
+            color: #fff;
+            transition: all 0.2s;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 343px) and (max-width: 950px) {
+
+    .column2 {
+        .menu-footer {
+            display: flex;
+            flex-direction: column;
+
+            .nav-menu1, .nav-menu2, .nav-menu3 {
+                width: auto !important;
+                padding: 10px 0;
+            }
+        }
+    }
+}

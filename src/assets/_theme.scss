@@ -3,7 +3,8 @@ $light-theme: (
   background: #f9f9f9,
   text: #333,
   input-radius: 4px,
-  border-radius: 4px
+  border: 1px solid rgb(59, 217, 88),
+  border-radius: 4px,
 );
 
 $dark-theme: (
@@ -11,5 +12,5 @@ $dark-theme: (
   text: #f1f1f1,
   input-radius: 12px,
   border: 1px solid red,
-  border-radius: 0px
+  border-radius: 0px,
 );

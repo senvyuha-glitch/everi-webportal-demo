@@ -10,6 +10,7 @@
         [placeholder]="placeholder"
         [disabled]="disabled"
         (input)="handleChange($event)"
+        [class.invalid]="formControl.invalid && formControl.touched"
         rows="4"
         [formControl]="formControl"
       ></textarea>
@@ -19,6 +20,7 @@
         [value]="value"
         [disabled]="disabled"
         (change)="handleChange($event)"
+        [class.invalid]="formControl.invalid && formControl.touched"
         [formControl]="formControl"
       >
         @for (opt of options ?? []; track opt.value) {
@@ -36,6 +38,7 @@
               [checked]="value === opt.value"
               [disabled]="disabled"
               (change)="handleChange($event)"
+              [class.invalid]="formControl.invalid && formControl.touched"
               [formControl]="formControl"
             />
             {{ opt.label }}
@@ -50,6 +53,7 @@
         [placeholder]="placeholder"
         [disabled]="disabled"
         (input)="handleChange($event)"
+        [class.invalid]="formControl.invalid && formControl.touched"
         [formControl]="formControl"
       />
     }

@@ -3,7 +3,7 @@
 :root {
   --sideMargin: 0px;
   --middleMargin: 0px;
-  .flex-container{
+  .flex-container {
     display: flex;
     flex-direction: row;
   }
@@ -11,38 +11,38 @@
 
 //mobile - iphone 13 mini
 @media (min-width: 343px) and (max-width: 800px) {
-:root {
-  --sideMargin: 16px;
-  --middleMargin: 0px;
-  .flex-container{
-    display: flex;
-    flex-direction: column;
-  }
-  .article-image{
-    max-width: 350px;
-  }
-  .reverse-posn{
-      flex-direction: column-reverse;    
+  :root {
+    --sideMargin: 16px;
+    --middleMargin: 0px;
+    .flex-container {
+      display: flex;
+      flex-direction: column;
     }
-    .carousel-img{
+    .article-image {
+      max-width: 350px;
+    }
+    .reverse-posn {
+      flex-direction: column-reverse;
+    }
+    .carousel-img {
       width: 100%;
     }
     .menu {
-        position: absolute;
-        top: 100%; /* Pushes menu below navbar */
-        left: 0;
-        right: 0;
-        background: $seaBlue;
-        flex-direction: column;
-        display: none;
-        padding: $space8;
-        z-index: 1000;
-        list-style: none;
-      }
-    .everi-logo-container{
+      position: absolute;
+      top: 100%; /* Pushes menu below navbar */
+      left: 0;
+      right: 0;
+      background: $seaBlue;
+      flex-direction: column;
+      display: none;
+      padding: $space8;
+      z-index: 1000;
+      list-style: none;
+    }
+    .everi-logo-container {
       padding-left: $space20;
       width: $pwidth80;
-            button {
+      button {
         width: $pwidth20;
         height: $height40;
         padding-left: $space20;
@@ -63,54 +63,52 @@
       text-decoration: none !important;
       font-size: $fontSize16;
       font-weight: $strong;
-       &.active-link {
-          background-color: lightgray;
-          color: black;
-          padding: 5px 10px;
-          border-radius: 5px;
-        }
+      &.active-link {
+        background-color: lightgray;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
     }
-      #menu-toggle:checked + .hamburger + .menu {
-        display: flex;
-        align-items: center;
-        gap: $space8;
-      }
+    #menu-toggle:checked + .hamburger + .menu {
+      display: flex;
+      align-items: center;
+      gap: $space8;
+    }
 
-      .hamburger {
-        display: block;
-        font-size: $fontSize32;
-        margin: $space0 $space12 $space12 $space12;
-      }
+    .hamburger {
+      display: block;
+      font-size: $fontSize32;
+      margin: $space0 $space12 $space12 $space12;
+    }
 
-      .contactus_div {
-        position: relative;
-        .contactus_card_div {
-           
-          form {
+    .contactus_div {
+      position: relative;
+      .contactus_card_div {
+        form {
+          .form-group {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: $space16;
+            width: 100%;
 
-            .form-group {
-              flex-direction: column;
-              align-items: flex-start;
-              margin-bottom: $space16;
-              width: 100%;
-
-              app-dynamic-input {
-                // flex: unset;
-                width: 100%;
-              }
-              label {
-                margin-bottom: $space8;
-              }
-
-            }
-
-            .form-input {
+            app-dynamic-input {
+              // flex: unset;
               width: 100%;
             }
+            label {
+              margin-bottom: $space8;
+            }
+          }
+
+          .form-input {
+            width: 100%;
           }
         }
       }
     }
+
+  }
 }
 //tablet - ipad pro 11 inch
 @media (min-width: 720px) and (max-width: 768px) {
@@ -121,23 +119,23 @@
 }
 //desktop - macbook air 13 inch
 @media (min-width: 1240px) and (max-width: 1540px) {
-    :root {
+  :root {
     --sideMargin: 200px;
     --middleMargin: 16px;
-      .flex-container{
-        display: flex;
-        flex-direction: row;
-      }
-      .reverse-posn{
-        flex-direction: row-reverse;    
-      }
-      .carousel-img{
-        width: 1500px;
-      }
-      .everi-logo-container{
-        padding-left: $space20;
-        width: $pwidth20;
-              button {
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+    .reverse-posn {
+      flex-direction: row-reverse;
+    }
+    .carousel-img {
+      width: 1500px;
+    }
+    .everi-logo-container {
+      padding-left: $space20;
+      width: $pwidth20;
+      button {
         width: $pwidth20;
         height: $height40;
         padding-left: $space20;
@@ -152,32 +150,30 @@
           }
         }
       }
-      }
-      .menu {
-        display: flex;
-        list-style: none;
-        gap: $space20;
-      }
-
-      .hamburger {
-        display: none;
-        font-size: $fontSize24;
-        cursor: pointer;
-      }
-
-      .menu li a {
-        font-size: $fontSize16;
-        font-weight: $strong;
-        color: $white;
-        text-decoration: none;
-        &.active-link {
-          background-color: lightgray;
-          color: black;
-          padding: 5px 10px;
-          border-radius: 5px;
-        }
-      }
+    }
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: $space20;
     }
 
-  }
+    .hamburger {
+      display: none;
+      font-size: $fontSize24;
+      cursor: pointer;
+    }
 
+    .menu li a {
+      font-size: $fontSize16;
+      font-weight: $strong;
+      color: $white;
+      text-decoration: none;
+      &.active-link {
+        background-color: lightgray;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

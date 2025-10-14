@@ -2,19 +2,19 @@
 @use './../../../assets/fonts' as *;
 @use './../../../assets/typography.scss' as *;
 
-.article{
-    padding-top: $space64;
-    padding-bottom: $space64;
+.article {
+  padding-top: $space64;
+  padding-bottom: $space64;
 }
 
 @mixin article-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex: 1;
-    padding-left: $space16;
-    padding-right: $space16;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  padding-left: $space16;
+  padding-right: $space16;
 }
 .article-left {
   @include article-side;
