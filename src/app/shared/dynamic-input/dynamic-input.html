@@ -54,4 +54,7 @@
       />
     }
   }
+  @if (formControl.invalid && formControl.touched) {
+    <div class="error-message">{{ getErrorMessage() }}</div>
+  }
 </div>

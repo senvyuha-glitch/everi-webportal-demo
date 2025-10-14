@@ -1,4 +1,8 @@
 <div class="contactus_div">
+    <div class="theme-toggle">
+        <mat-slide-toggle [(ngModel)]="isDarkMode" (change)="toggleTheme()" color="primary">
+        </mat-slide-toggle>
+    </div>
   <div class="contactus_title">Contact Us</div>
   <div class="contactus_title_line_div"><div class="contactus_title_line"></div></div>
   <div class="contactus_card_div">
@@ -84,11 +88,11 @@
       </div>
       <div class="checkbox-wrapper">
         <label>
-            <input type="checkbox" [formControl]="humanControl" />
-            I confirm, I am not a robot 🤖
+          <input type="checkbox" [formControl]="humanControl" />
+          I confirm, I am not a robot 🤖
         </label>
         @if (form.get('isHuman')?.invalid && form.get('isHuman')?.touched) {
-            <div class="error-message">You must confirm you're human.</div>
+          <div class="error-message">You must confirm you're human.</div>
         }
         <!-- <div class="error" *ngIf="form.get('isHuman')?.invalid && form.get('isHuman')?.touched">
             You must confirm you're human.

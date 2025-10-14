@@ -12,5 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class Menu {
   showDropdown = false;
-  digitalDropdownItems = [{ label: 'LEADERSHIP', route: '/leaderships' }];
+  digitalDropdownItems = [
+    { label: 'LEADERSHIP', route: '/leaderships' },
+    { label: 'CONTACT US', route: '/contactus' },
+  ];
 }

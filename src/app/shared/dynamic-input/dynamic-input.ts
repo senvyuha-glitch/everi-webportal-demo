@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, forwardRef, Input } from '@angular/core';
-import { FormControl, FormsModule, NG_VALUE_ACCESSOR,ControlValueAccessor, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormsModule,
+  NG_VALUE_ACCESSOR,
+  ControlValueAccessor,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-input',
@@ -11,9 +17,9 @@ import { FormControl, FormsModule, NG_VALUE_ACCESSOR,ControlValueAccessor, React
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => DynamicInput),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class DynamicInput implements ControlValueAccessor {
   @Input() type: string = 'text';
@@ -21,7 +27,7 @@ export class DynamicInput implements ControlValueAccessor {
   @Input() placeholder?: string;
   @Input() options?: { label: string; value: string }[];
   @Input() formControl!: FormControl;
-  
+
   value: any = '';
   disabled = false;
 
@@ -49,5 +55,21 @@ export class DynamicInput implements ControlValueAccessor {
     this.value = target.value;
     this.onChange(this.value);
     this.onTouched();
+  }
+
+  getErrorMessage(): string | null {
+    if (!this.formControl || this.formControl.valid || !this.formControl.touched) return null;
+
+    if (this.formControl.errors?.['required']) return `${this.label ?? 'This field'} is required.`;
+    if (this.formControl.errors?.['email']) return 'Please enter a valid email address.';
+    if (this.formControl.errors?.['pattern']) return 'Invalid format.';
+    if (this.formControl.errors?.['minlength']) {
+      return `Minimum length is ${this.formControl.errors['minlength'].requiredLength}.`;
+    }
+    if (this.formControl.errors?.['maxlength']) {
+      return `Maximum length is ${this.formControl.errors['maxlength'].requiredLength}.`;
+    }
+
+    return 'Invalid input.';
   }
 }

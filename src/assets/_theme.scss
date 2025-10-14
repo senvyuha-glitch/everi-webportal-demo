@@ -1,0 +1,14 @@
+// theme.scss
+$light-theme: (
+  background: #f9f9f9,
+  text: #333,
+  input-radius: 4px,
+  border-radius: 4px
+);
+
+$dark-theme: (
+  background: #1e1e1e,
+  text: #f1f1f1,
+  input-radius: 12px,
+  border-radius: 0px
+);

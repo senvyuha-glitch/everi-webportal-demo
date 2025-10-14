@@ -1,24 +1,27 @@
 .dropdown-menu {
+  max-width: 200px;
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: #EDE8E6;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin: 4px;
   border: 1px solid #ccc;
   z-index: 1000;
 
   li {
     padding: 0.5rem 1rem;
-    white-space: nowrap;
+    margin-bottom: 2px;
+    // white-space: nowrap;
 
     a {
       text-decoration: none;
-      color: #333;
+      background-color: white; 
+      color: #ff671d;
 
       &:hover {
-        background-color: #f0f0f0;
+        background-color: #ff671d;
+        color: white;
       }
     }
   }
