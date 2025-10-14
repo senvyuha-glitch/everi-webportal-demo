@@ -86,10 +86,46 @@
         </g>
         <line class="st1" x1="340.4" y1="14.4" x2="340.4" y2="138.7" />
       </svg>
+
     </div>
 
     <div class="menu-container">
-      <ul class="nav-links">
+      <!--menu -->
+
+  <nav class="navbar">
+
+        <input type="checkbox" id="menu-toggle"   style="display: none;"/>
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+  <ul class="menu">
+   <li>
+          <a
+            routerLink="/home"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/leaderships"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >LEADERSHIP</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contactus"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >CONTACT US</a
+          >
+        </li>
+        
+  </ul>
+</nav>
+      <!--menu end-->
+      <!-- <ul class="nav-links">
         <li>
           <a
             routerLink="/home"
@@ -170,10 +206,10 @@
             [routerLinkActiveOptions]="{ exact: true }"
             >LOYALTY</a
           >
-        </li>
+        </li> -->
         <!-- <li><a routerLink="/mobile" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">MOBILE</a></li>
         <li><a routerLink="/news" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">NEWS</a></li> -->
-      </ul>
+      <!-- </ul> -->
     </div>
   </nav>
 </div>

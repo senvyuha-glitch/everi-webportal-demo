@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Dropdown } from '../dropdown/dropdown';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, Dropdown, CommonModule],
+  imports: [RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './menu.html',
   styleUrl: './menu.scss',
 })

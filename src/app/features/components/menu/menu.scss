@@ -7,36 +7,64 @@
     display: flex;
     align-items: center;
 
-    .everi-logo-container {
-      // display: flex;
-      // align-items: center;
-      padding-left: 20px;
-      width: $pwidth20;
-    }
+   
     .menu-container {
-      width: $pwidth80;
+      // width: $pwidth80;
 
-      ul {
-        display: flex;
-        justify-content: space-around;
-        list-style-type: none;
-      }
+      // ul {
+      //   display: flex;
+      //   justify-content: space-around;
+      //   list-style-type: none;
+      // }
     }
   }
-  a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    &.active-link {
-    //   text-decoration: underline;
-      background-color: lightgray;
-        color: black;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-  }
+  // a {
+  //   color: white;
+  //   text-decoration: none;
+  //   margin: 0 15px;
+  //   font-size: 18px;
+  //   &.active-link {
+  //   //   text-decoration: underline;
+  //     background-color: lightgray;
+  //       color: black;
+  //       padding: 5px 10px;
+  //       border-radius: 5px;
+  //   }
+  // }
 }
+
+.navbar {
+   
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: midnightblue;
+  color: white;
+}
+
+
+
+
+
+// /* Mobile Styles */
+// @media (max-width: 768px) {
+//   .menu {
+//     display: none;
+//     flex-direction: column;
+//     width: 100%;
+//    background: midnightblue;
+//     padding: 10px;
+//   }
+
+//   #menu-toggle:checked + .hamburger + .menu {
+//     display: flex;
+//   }
+
+//   .hamburger {
+//     display: block;
+//   }
+// }
+
 
 .dropdown-wrapper {
   position: relative;
