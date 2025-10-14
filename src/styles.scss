@@ -12,6 +12,7 @@
 @use './assets/elevation.scss' as *;
 @use './assets/media.scss' as *;
 @use './assets/screenbackground.scss' as *;
+@import url('./assets/_media.scss');
 
 html {
   @include mat.theme(

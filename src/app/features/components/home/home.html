@@ -1,19 +1,20 @@
+
 <div class="contentDiv">
-  <div class="carousel_div">
-    <app-carousel [images]="bannerArr"></app-carousel>
-  </div>
-  <div class="prod_card_div">
+    <div class="carousel_div">
+        <app-carousel [images]="bannerArr"></app-carousel>
+    </div>
+    <div class="flex-container prod_card_div">
     <ng-container *ngFor="let card of cardsArr">
-      <app-card>
-        <img class="prod_card_img" [src]="card.image" alt="Product Image" />
-        <p class="prod_card_title">{{ card.title }}</p>
-        <p class="prod_card_info">{{ card.content }}</p>
-      </app-card>
+        <app-card>
+            <img class="prod_card_img" [src]="card.image" alt="Product Image">
+            <p class="prod_card_title">{{ card.title }}</p>
+            <p class="prod_card_info">{{ card.content }}</p>
+        </app-card>
     </ng-container>
-  </div>
-  <div class="article_div">
-    <ng-container *ngFor="let article of articlesArr">
-      <app-article [article]="article"></app-article>
-    </ng-container>
-  </div>
+    </div>
+    <div class="article_div">
+        <ng-container *ngFor="let article of articlesArr">
+            <app-article [article]="article"></app-article>
+        </ng-container>
+    </div>
 </div>

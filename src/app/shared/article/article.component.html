@@ -1,18 +1,12 @@
-<div
-  [ngClass]="
-    (article.contentPosition === 'right' ? 'article' : 'article reverse-posn') +
-    ' ' +
-    articleBgClass
-  "
->
-  <div class="article-left">
-    <img src="{{ article.imageUrl }}" alt="Article Image" class="article-image" />
-  </div>
-  <div class="article-right">
-    <p class="article-title">{{ article.title }}</p>
-    <p class="article-sub-title" *ngIf="!article.splitter">{{ article.subtitle }}</p>
-    <p class="article-splitter" *ngIf="article.splitter"></p>
-    <p class="article-content">{{ article.content }}</p>
-    <app-button [buttonValue]="article.buttonValue" ngSkipHydration=""></app-button>
-  </div>
+<div [ngClass]="(article.contentPosition === 'right' ? 'flex-container article' : 'flex-container article reverse-posn') + ' ' + articleBgClass">
+    <div class="article-left">
+       <img src="{{article.imageUrl}}" alt="Article Image" class="article-image">
+    </div>
+    <div class="article-right">
+        <p class="article-title">{{ article.title }}</p>
+        <p class="article-sub-title" *ngIf="!article.splitter">{{ article.subtitle }}</p>
+        <p class="article-splitter" *ngIf="article.splitter"></p>
+        <p class="article-content">{{ article.content }}</p>
+        <app-button [buttonValue]="article.buttonValue" ngSkipHydration=""></app-button>
+    </div>
 </div>
