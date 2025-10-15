@@ -5,13 +5,13 @@
 .footerDiv {
   // background-color: #0C51A1 !important;
   color: #fff;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: $space24;
+  padding-bottom: $space24;
 
   .footer-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: $space0 $space20;
 
     .footer-columns {
       display: flex;
@@ -19,43 +19,43 @@
       flex-wrap: wrap;
       .column1 {
         width: 245px;
-        margin: 12px;
+        margin: $space12;
 
         .footer-everi-address {
-          margin-top: 12px;
-          font-size: 16px;
+          margin-top: $space12;
+          font-size: $fontSize16;
           line-height: 1.5;
           p {
-            margin: 4px 0;
+            margin: $space4 $space0;
           }
         }
       }
       .column2 {
         width: 750px;
-        margin: 12px;
+        margin: $space12;
 
         .menu-footer {
           display: flex;
-          margin-bottom: 0;
-          margin-left: -16px;
-          margin-right: -16px;
+          margin-bottom: $space0;
+          margin-left: -$space16;
+          margin-right: -$space16;
           list-style: none;
           .nav-menu1 {
-            margin-bottom: 28px;
-            padding: 0 16px;
+            margin-bottom: $space28;
+            padding: $space0 $space16;
             width: 165px;
             flex-grow: 1;
             flex-shrink: 1;
 
             .nav-menu1-column1-container {
-              padding-top: 24px;
+              padding-top: $space24;
               ul {
                 list-style: none;
-                margin: 0;
-                padding: 0;
+                margin: $space0;
+                padding: $space0;
                 li {
-                  line-height: 28px;
-                  margin-bottom: 4px;
+                  line-height: $space28;
+                  margin-bottom: $space4;
                   a{
                     color: #fff;
                     text-decoration: none;
@@ -65,28 +65,28 @@
             }
           }
           .nav-menu2 {
-            margin-bottom: 28px;
-            padding: 0 16px;
+            margin-bottom: $space28;
+            padding: $space0 $space16;
             width: 165px;
             flex-grow: 1;
             flex-shrink: 1;
 
             h2 {
               font-family: 'Verlag A', 'Verlag B', sans-serif;
-              font-size: 20px;
-              font-weight: 700;
-              margin-bottom: 8px;
+              font-size: $fontSize20;
+              font-weight: $strong;
+              margin-bottom: $space8;
               color: #fff;
             }
             .nav-menu2-column2-container {
-              padding-top: 24px;
+              padding-top: $space24;
               ul {
                 list-style: none;
-                margin: 0;
-                padding: 0;
+                margin: $space0;
+                padding: $space0;
                 li {
-                  line-height: 28px;
-                  margin-bottom: 4px;
+                  line-height: $space28;
+                  margin-bottom: $space4;
                   a{
                     color: #fff;
                     text-decoration: none;
@@ -97,28 +97,28 @@
           }
 
           .nav-menu3 {
-            margin-bottom: 28px;
-            padding: 0 16px;
+            margin-bottom: $space28;
+            padding: $space0 $space16;
             width: 165px;
             flex-grow: 1;
             flex-shrink: 1;
 
             h2 {
               font-family: 'Verlag A', 'Verlag B', sans-serif;
-              font-size: 20px;
-              font-weight: 700;
-              margin-bottom: 8px;
+              font-size: $fontSize20;
+              font-weight: $strong;
+              margin-bottom: $space8;
               color: #fff;
             }
             .nav-menu3-column3-container {
-              padding-top: 24px;
+              padding-top: $space24;
               ul {
                 list-style: none;
-                margin: 0;
-                padding: 0;
+                margin: $space0;
+                padding: $space0;
                 li {
-                  line-height: 28px;
-                  margin-bottom: 4px;
+                  line-height: $space28;
+                  margin-bottom: $space4;
                   a{
                     color: #fff;
                     text-decoration: none;
@@ -131,12 +131,12 @@
       }
       .column3 {
         width: 235px;
-        margin: 10px;
+        margin: $space12;
 
         a {
           display: inline-block;
-          width: 22px;
-          margin: 0 10px;
+          width: $width24;
+          margin: $space0 $space12;
 
           svg {
             color: #fff;
@@ -160,7 +160,7 @@
 
             .nav-menu1, .nav-menu2, .nav-menu3 {
                 width: auto !important;
-                padding: 10px 0;
+                padding: $space12 $space0;
             }
         }
     }
