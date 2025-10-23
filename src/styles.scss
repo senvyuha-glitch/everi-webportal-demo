@@ -21,6 +21,7 @@
   --input-radius: 4px;
   --border-radius: 4px;
   --border: 1px solid rgb(59, 217, 88),
+  --fontFamily: $fontFamily;
 }
 
 .dark-theme {
@@ -115,7 +116,7 @@ video {
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
-  font-family: $fontFamily;
+  font-family: var(--fontFamily);
 }
 
 .headerDiv {

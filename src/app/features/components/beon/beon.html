@@ -1,0 +1,20 @@
+<div class="beon-container">
+  <div class="beon-content">
+    <div class="beon-header">
+        <h3>Theme Configuration</h3>
+    </div>
+    <div class="form-container">
+        <form [formGroup]="beonForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <app-dynamic-input
+                label="Font Style"
+                type="text"
+                placeholder="Font Style"
+                [formControl]="fontStyleControl"
+            ></app-dynamic-input>
+        </div>
+        <button type="submit" class="submit-button">Save</button>
+        </form>
+    </div>
+  </div>
+</div>
