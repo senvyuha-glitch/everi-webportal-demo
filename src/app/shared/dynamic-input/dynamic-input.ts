@@ -53,6 +53,7 @@ export class DynamicInput implements ControlValueAccessor {
   handleChange(event: Event) {
     const target = event.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
     this.value = target.value;
+    console.log('DynamicInput value changed to:', this.value);
     this.onChange(this.value);
     this.onTouched();
   }

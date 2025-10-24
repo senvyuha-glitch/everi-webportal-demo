@@ -125,31 +125,11 @@
           border-color: #007bff;
         }
       }
-      .submit-button {
-        width: fit-content;
-        padding: $space12;
-        font-size: $fontSize16;
-        font-weight: $default;
-        background-color: #0078d4;
-        color: #fff;
-        border: none;
-        border-radius: $radius4;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #005fa3;
-        }
-
-        &:disabled {
-          background-color: #ccc;
-          cursor: not-allowed;
-        }
-      }
-      button {
-        margin-top: $space16;
-        background-color: #0078d4;
-      }
+      
+      // button {
+      //   margin-top: $space16;
+      //   background-color: #0078d4;
+      // }
     }
     .contactus_card_info {
       font-size: $fontSize16;

@@ -20,8 +20,12 @@
   --text-color: #333;
   --input-radius: 4px;
   --border-radius: 4px;
-  --border: 1px solid rgb(59, 217, 88),
-  --fontFamily: $fontFamily;
+  --border: 1px solid rgb(59, 217, 88);
+  --fontFamily: #{$fontFamily};
+  --buttonRadius: #{$radius4};
+  --buttonRadius8: #{$radius8};
+  --buttonBackgroundColor: #0078d4;
+  --buttonLabelTextType: capitalize;
 }
 
 .dark-theme {
@@ -118,7 +122,32 @@ video {
   box-sizing: border-box;
   font-family: var(--fontFamily);
 }
+.beonButton {
+  background-color: var(--buttonBackgroundColor);
+  border-radius: var(--buttonRadius);
+  text-transform: var(--buttonLabelTextType);
+}
+.submit-button {
+        width: fit-content;
+        align-self: center;
+        padding: $space12;
+        margin-top: $space12;
+        font-size: $fontSize16;
+        font-weight: $default;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
+        &:hover {
+          background-color: #005fa3;
+        }
+
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
 .headerDiv {
   min-height: $height152;
   background-color: $seaBlue;

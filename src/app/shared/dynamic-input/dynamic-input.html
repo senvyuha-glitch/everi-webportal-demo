@@ -34,10 +34,9 @@
           <label>
             <input
               type="radio"
+              name="{{ label }}"
               [value]="opt.value"
-              [checked]="value === opt.value"
               [disabled]="disabled"
-              (change)="handleChange($event)"
               [class.invalid]="formControl.invalid && formControl.touched"
               [formControl]="formControl"
             />

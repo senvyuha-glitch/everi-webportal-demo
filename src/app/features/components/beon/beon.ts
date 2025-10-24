@@ -12,16 +12,40 @@ import { ConfigService } from '../../../shared/services/config-service';
   styleUrl: './beon.scss'
 })
 export class Beon {
-  beonForm = new FormGroup({
+  
+
+  fontForm = new FormGroup({
     fontStyle: new FormControl('', Validators.required),
   });
+
+  beonButton = new FormGroup({
+    buttonRadius: new FormControl('', Validators.required),
+    buttonLabelTextType: new FormControl('', Validators.required),
+    buttonLabelColor: new FormControl('', Validators.required),
+  });
+
+  beonForm = new FormGroup({
+    fontForm: this.fontForm,
+    beonButton: this.beonButton,
+  });
+
   private configService = inject(ConfigService);
   submittedData: any = null;
 
   get fontStyleControl() {
-    return this.beonForm.get('fontStyle') as FormControl;
+    return this.beonForm.get('fontForm.fontStyle') as FormControl;}
+
+  get buttonRadiusControl() {
+    return this.beonForm.get('beonButton.buttonRadius') as FormControl;
   }
 
+  get buttonLabelTextTypeControl() {
+    return this.beonForm.get('beonButton.buttonLabelTextType') as FormControl;
+  }
+
+  get buttonLabelColorControl() {
+    return this.beonForm.get('beonButton.buttonLabelColor') as FormControl;
+  }
 
   onSubmit() {
     if (this.beonForm.invalid) {
