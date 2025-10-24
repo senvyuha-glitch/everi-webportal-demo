@@ -7,18 +7,20 @@
     background-color: #f9f9f9;
     // font-family: "Segoe UI", sans-serif;
     color: #333;
+    
 
     .beon-content {
-      max-width: 100%;
-      background: beige;
+      width: 60%;
+      // background: beige;
       padding: 16px;
       border-radius: 8px;
-      
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       .beon-header {
         font-size: 22px;
         font-weight: 600;
         margin-bottom: 8px;
         text-align: center;
+        color: #212121;
       }
 
       .form-container {
