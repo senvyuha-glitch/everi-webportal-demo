@@ -15,17 +15,27 @@ loadConfig(): Promise<boolean> {
         let fontFam = JSON.parse(fontfam);
         let fontStyle = fontFam?.fontForm?.fontStyle;
         let buttonStyle = fontFam?.beonButton;
-        let bt8 = 'buttonRadius8';let varName = '--'+bt8;
-        console.log('varName:',varName);
         console.log('Parsed font family from localStorage:', fontStyle);
         console.log('Parsed button style from localStorage:', buttonStyle);
+        const classNames = Object.keys(fontFam);
+        
         // document.documentElement.style.setProperty('--fontFamily', fontFamily);
         let root = ` :root  { --fontFamily:${fontStyle}; } html, body {
-                      font-family: ${fontStyle}} .beonButton {
-                      border-radius: var(${varName});
-                      background-color: ${buttonStyle?.buttonLabelColor};
-                      text-transform: ${buttonStyle?.buttonLabelTextType};
-                    }`;
+                      font-family: ${fontStyle}} `
+         for (let i = 1; i < classNames.length; i++) {
+          const className = classNames[i];    
+            // gather actual property names from the fontFam entry
+            const props = Object.keys(fontFam[className] || {});
+            if (props.length) {
+            root += `.${className} {`;
+            for (const prop of props) {
+              const value = fontFam[className][prop];
+              // append each property: use the raw value (or wrap with var(...) if it's a CSS variable)
+              root += ` ${prop}: var(${value});`;
+            }
+            root += ` }`;
+            }
+                  }
         this.createCustomStylesRoot(root);
         console.log('Applied font family to document:', fontStyle);
 

@@ -22,13 +22,13 @@
                 type="select"
                 placeholder="Button Corner Radius"
                 [options]="[
-                  { label: 'Radius0', value: '$radius0' },
-                  { label: 'Radius4', value: '$radius4' },
-                  { label: 'Radius8', value: '$radius8' },
-                  { label: 'Radius12', value: '$radius12' },
-                  { label: 'Radius16', value: '$radius16' },
-                  { label: 'Radius20', value: '$radius20' },
-                  { label: 'RadiusRound', value: '$adiusRound' }
+                  { label: 'Radius0', value: '--radius0' },
+                  { label: 'Radius4', value: '--radius4' },
+                  { label: 'Radius8', value: '--radius8' },
+                  { label: 'Radius12', value: '--radius12' },
+                  { label: 'Radius16', value: '--radius16' },
+                  { label: 'Radius20', value: '--radius20' },
+                  { label: 'RadiusRound', value: '--radiusRound' }
                 ]"
                 [formControl]="buttonRadiusControl"
               ></app-dynamic-input>
@@ -36,9 +36,9 @@
               type="radio"
               label="Button Label Text Type"
               [options]="[
-                { label: 'Uppercase', value: 'uppercase' },
-                { label: 'Lowercase', value: 'lowercase' },
-                { label: 'Capitalize', value: 'capitalize' }]"
+                { label: 'Uppercase', value: '--uppercase' },
+                { label: 'Lowercase', value: '--lowercase' },
+                { label: 'Capitalize', value: '--capitalize' }]"
               [formControl]="buttonLabelTextTypeControl"
               >
               </app-dynamic-input>
@@ -46,9 +46,9 @@
                 type="radio"
                 label="Button Label Color"
                 [options]="[
-                  { label: 'Sea Blue', value: '$seaBlue' },
-                  { label: 'Jungle Green', value: '$jungleGreen' },
-                  { label: 'Fruity Orange', value: '#{$fruityOrange}' }]"
+                  { label: 'Sea Blue', value: '--seaBlue' },
+                  { label: 'Jungle Green', value: '--jungleGreen' },
+                  { label: 'Fruity Orange', value: '--fruityOrange' }]"
                 [formControl]="buttonLabelColorControl"
                >
               </app-dynamic-input>
