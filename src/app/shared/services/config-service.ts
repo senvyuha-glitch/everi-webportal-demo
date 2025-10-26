@@ -20,8 +20,8 @@ loadConfig(): Promise<boolean> {
         const classNames = Object.keys(fontFam);
         
         // document.documentElement.style.setProperty('--fontFamily', fontFamily);
-        let root = ` :root  { --fontFamily:${fontStyle}; } html, body {
-                      font-family: ${fontStyle}} `
+        let root = ` :root  { --fontFamily:${fontStyle} !important; } html, body {
+                      font-family: ${fontStyle} !important;} `
          for (let i = 1; i < classNames.length; i++) {
           const className = classNames[i];    
             // gather actual property names from the fontFam entry
@@ -31,7 +31,7 @@ loadConfig(): Promise<boolean> {
             for (const prop of props) {
               const value = fontFam[className][prop];
               // append each property: use the raw value (or wrap with var(...) if it's a CSS variable)
-              root += ` ${prop}: var(${value});`;
+              root += ` ${prop}: var(${value}) !important;`;
             }
             root += ` }`;
             }
