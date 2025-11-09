@@ -17,7 +17,7 @@
   line-height: $space28;
 }
 .contentDiv {
-  margin-top: $height240;
+  margin-top: $height200;
   margin-bottom: $height200;
   background-color: $fogWhite;
 }
@@ -26,10 +26,66 @@
   width: $fullWidth;
   display: flex;
 }
+.video-container {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  opacity: 1;
+
+  .background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .autoplay-icon {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    top: -80px;
+    cursor: pointer;
+
+    svg {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.85;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+  }
+
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+
+    .hero-slide-title {
+      color: #ffffff;
+      font-size: 4.375em;
+      font-weight: 400;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
 ::ng-deep.prod_card_div {
   display: flex;
   height: 100%;
   justify-content: center;
+  padding-top: 24px;
   padding-left: $space96;
   padding-right: $space96;
   .card {

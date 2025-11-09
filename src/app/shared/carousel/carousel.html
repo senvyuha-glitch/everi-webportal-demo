@@ -8,8 +8,10 @@
     />
   </div>
 
-  <button class="nav prev" (click)="prev()" [disabled]="currentIndex === 0">‹</button>
-  <button class="nav next" (click)="next()" [disabled]="currentIndex === images.length - 1">
-    ›
-  </button>
+  <div class="button">
+    <button class="nav prev" (click)="prev()" [disabled]="currentIndex === 0">‹</button>
+    <button class="nav next" (click)="next()" [disabled]="currentIndex === images.length - 1">
+      ›
+    </button>
+  </div>
 </div>

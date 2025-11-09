@@ -6,12 +6,24 @@ import { ArticleComponent } from '../../../shared/article/article.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CardComponent, CommonModule, Carousel, ArticleComponent],
+  imports: [CardComponent, CommonModule, ArticleComponent],
   standalone: true,
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home {
+  isPlaying = true;
+
+  toggleVideo(video: HTMLVideoElement) {
+    if (video.paused) {
+      video.play();
+      this.isPlaying = true;
+    } else {
+      video.pause();
+      this.isPlaying = false;
+    }
+  }
+
   bannerArr = [
     {
       image:
